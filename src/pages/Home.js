@@ -91,7 +91,7 @@ const handleAdd = (e) => {
         </tbody>
       </table>
     </div>
-    <a href=''></a>
+    <a className="text-start" href="https://github.com/oneharry/ToDo.git" target="_blank">Link to github repo</a>
     </div>
   );
 };
