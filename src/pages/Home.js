@@ -7,7 +7,6 @@ export const Home = () => {
     const todos = useSelector((state) => state.todos);
     const dispatch = useDispatch();
     const [name, setName] = useState('');
-    const [newName, setnewName] = useState('');
   const [editTodoId, setEditTodoId] = useState(null);
 
 
@@ -23,7 +22,7 @@ const handleAdd = (e) => {
   const handleEditTodo = () => {
     if (name.trim() !== '' && editTodoId !== null) {
       dispatch(editTodo(editTodoId, name));
-      setnewName('');
+     
       setEditTodoId(null);
     }
   };
@@ -35,7 +34,7 @@ const handleAdd = (e) => {
   const handleEditButtonClick = (id, name) => {
     setEditTodoId(id);
     setName(name);
-    setnewName(name);
+   
   };
 
   console.log("H", todos)
@@ -91,7 +90,7 @@ const handleAdd = (e) => {
         </tbody>
       </table>
     </div>
-    <a className="text-start" href="https://github.com/oneharry/ToDo.git" target="_blank">Link to github repo</a>
+    <a className="text-start" rel="noreferrer" href="https://github.com/oneharry/ToDo.git" target="_blank">Link to github repo</a>
     </div>
   );
 };
